@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Data Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Health Data Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#data-entry">Data Entry</a></li>
+                <li><a href="#admin-view">Admin View</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="data-entry">
+            <h2>Data Entry for Hospitals/Departments</h2>
+            <form id="data-form">
+                <label for="facility-name">Facility Name:</label>
+                <input type="text" id="facility-name" name="facility-name" required>
+
+                <label for="data-type">Data Type:</label>
+                <select id="data-type" name="data-type" required>
+                    <option value="performance">Performance</option>
+                    <option value="programs">Programs</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="data-details">Data Details:</label>
+                <textarea id="data-details" name="data-details" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="form-response"></p>
+        </section>
+
+        <section id="admin-view">
+            <h2>Admin View</h2>
+            <div id="data-table">
+                <!-- Data entries will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Health Data Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
